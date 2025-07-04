@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio MUHAMAD ALFA REZA GOBEL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="hero">
+    <div class="tanggal" id="tanggal"></div>
+    <div class="hero-content">
+        <h1 class="animasi-judul">PORTOFOLIO</h1>
+        <div class="garis"></div>
+    </div>
+    </header>
+
+    <section class="profil">
+        <div class="foto fade-in">
+            <div class="foto-wrapper">
+                <img src="{{ url_for('static', filename='foto.jpg') }}" alt="Foto Profil">
+            </div>
+            <p class="umur">20 Tahun</p> 
+        </div>
+
+        <div class="deskripsi fade-in">
+            <h2>HALO, SAYA MUHAMAD ALFA REZA GOBEL</h2>
+            <p>
+                Mahasiswa aktif semester 5 dengan minat khusus dalam analisis data, teknologi, dan pengolahan data.
+                Memiliki komitmen untuk terus mengembangkan kompetensi dalam analisis data, pengambilan keputusan berbasis informasi, 
+                serta penguasaan alat analisis seperti Python, R Studio, & SQL. 
+                Saat ini sedang mencari peluang magang untuk mengasah keterampilan teknis, sekaligus berkontribusi secara nyata dalam proyek-proyek berbasis data dan teknologi.
+            </p>
+            <p class="kuliah">S1 Sains Data, Universitas Negeri Surabaya (2023 - Sekarang)</p> 
+        </div>
+    </section>
+
+    <section class="tools-global fade-in">
+        <div class="tools-list-global">
+            
+            <div class="tool-item-global" style="background-image: url('{{ url_for('static', filename='python.png') }}');">
+                <span>Python</span>
+            </div>
+
+            <div class="tool-item-global" style="background-image: url('{{ url_for('static', filename='rstudio.png') }}');">
+                <span>R Studio</span>
+            </div>
+
+            <div class="tool-item-global" style="background-image: url('{{ url_for('static', filename='sql.jpeg') }}');">
+                <span>SQL</span>
+            </div>
+
+            <div class="tool-item-global" style="background-image: url('{{ url_for('static', filename='looker (2).jpeg') }}');">
+                <span>Looker Studio</span>
+            </div>
+
+            <div class="tool-item-global" style="background-image: url('{{ url_for('static', filename='figma.png') }}');">
+                <span>Figma</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="skill">
+        <div class="skill-row fade-in">
+            <div class="hard-skill">
+                <h2>HARD SKILL</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>R Studio</li>
+                    <li>SQL</li>
+                    <li>Looker Studio</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div class="soft-skill">
+                <h2>SOFT SKILL</h2>
+                <ul>
+                    <li>Komunikasi yang Baik</li>
+                    <li>Kerja Sama Tim</li>
+                    <li>Manajemen Waktu</li>
+                    <li>Problem Solving</li>
+                    <li>Kepemimpinan Dasar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="background-section">
+    <div class="overlay">
+        <h2 class="fade-in-big">PENGALAMAN PROYEK</h2>
+    </div>
+</section>
+
+<section class="project-container">
+    <div class="project-item fade-in">
+        <a href="/proyek1">
+            <h3>Perbandingan Klasifikasi Cuaca Kota Denpasar dengan Regresi Logistik Multinomial dan Analisis Diskriminan </h3>
+            <p>Proyek ini membandingkan kinerja Regresi Logistik Multinomial (MLR) dan Analisis Diskriminan Linear (LDA) untuk klasifikasi kondisi cuaca Kota Denpasar tahun 2019 ke dalam empat kategori: Clear, Clouds, Rain, dan Thunderstorm. Analisis dilakukan menggunakan RStudio, mencakup pemodelan, evaluasi akurasi, dan interpretasi hasil.</p>
+        </a>
+    </div>
+    
+    
+    <div class="project-item fade-in">
+        <a href="/proyek2">
+            <h3>NafasKu : Aplikasi Cerdas untuk Pemantauan Kualitas Udara & Prediksi Serangan Asma Berbasis Artificial Intellegence</h3>
+            <p>NafasKu adalah aplikasi berbasis teknologi dan kecerdasan buatan (AI) yang 
+                dirancang untuk membantu penderita asma dan penyakit pernapasan dalam mendeteksi 
+                kualitas udara secara real-time serta merespons serangan asma dengan cepat dan efisien. </p>
+            </a>
+        </div>
+        
+        <div class="project-item fade-in">
+        <a href="/proyek3">
+            <h3>Forecasting Kualitas Udara  untuk Prediksi Indeks Standar Pencemar Udara (ISPU) di Kota Jakarta </h3>
+            <p>Proyek ini merupakan implementasi konsep Data Mining untuk melakukan forecasting atau prediksi terhadap Indeks Standar Pencemar Udara (ISPU) di Kota Jakarta. Pengembangan model prediksi ISPU bertujuan untuk menyediakan proyeksi kualitas udara secara akurat guna mendukung pengambilan kebijakan berbasis data.</p>
+        </a>
+    </div>
+    
+    
+    <div class="project-item fade-in">
+        <a href="/proyek4">
+            <h3>Covid - 19 Visualiasi Untuk Literasi Digital</h3>
+            <p>Proyek ini merupakan pembuatan dashboard interaktif menggunakan Looker Studio untuk memvisualisasikan data Covid-19. Visualisasi ini menampilkan informasi seperti jumlah kasus, tingkat kesembuhan, tingkat kematian, dan tren persebaran Covid-19 secara mudah dipahami. </p>
+        </a>
+    </div>
+
+    <div class="project-item fade-in">
+        <a href="/proyek5">
+            <h3>DairyMoo: Optimasi Restocking Produk Susu di Peternakan Sapi Perah Menggunakan Algoritma Dynamic Programing</h3>
+            <p>DairyMoo adalah sistem berbasis algoritma Dynamic Programming yang 
+            dirancang untuk mengoptimalkan proses restocking produk susu di peternakan sapi perah. Sistem 
+            ini menganalisis pola penjualan dan permintaan pelanggan untuk menghasilkan keputusan 
+            restocking yang efisien, dengan tujuan memastikan ketersediaan stok minimum tanpa menumpuk 
+            produk secara berlebih. </p>
+        </a>
+    </div>
+    
+    <div class="project-item fade-in">
+        <a href="/proyek6">
+            <h3>Penerapan Data Warehouse dalam Analisis Kasus dan Kematian COVID-19 di Amerika Serikat</h3>
+            <p>Proyek ini bertujuan untuk merancang dan membangun sistem Data Warehouse yang berfungsi sebagai pusat integrasi dan penyimpanan data Covid-19 di Amerika Serikat. Sistem ini dirancang untuk menghimpun data dari berbagai sumber secara terstruktur, konsisten, dan historis guna mendukung keperluan analisis dan pelaporan.</p>
+        </a>
+    </div>
+
+    <div class="project-item fade-in">
+        <a href="/proyek7">
+            <h3>Sistem Verifikasi Tanda Tangan Menggunakan Artificial Neural Network (ANN) dengan Pengolahan Citra Digital</h3>
+            <p>Proyek ini bertujuan untuk merancang sistem verifikasi tanda tangan digital berbasis dengan dukungan teknik image preprocessing, guna meningkatkan akurasi dalam membedakan tanda tangan asli dan palsu secara efisien. </p>
+        </a>
+    </div>
+
+    <div class="project-item fade-in">
+        <a href="/proyek8">
+            <h3>PrediStrok : Klasifikasi Resiko Serangan Stroke Menggunakan Multi Layer Perceptron (MLP) </h3>
+            <p>Sistem ini ditujukan untuk membantu tenaga medis dan masyarakat umum dalam mengidentifikasi risiko stroke secara dini, khususnya berdasarkan atribut kesehatan seperti usia, tekanan darah, kadar glukosa, riwayat penyakit, serta kebiasaan hidup seperti merokok. </p>
+        </a>
+    </div>
+    
+    <div class="project-item fade-in">
+        <a href="/proyek9">
+            <h3> SirenSignal: Pengolahan Sinyal Digital untuk Menganalisis Arti Sirene Ambulans menggunakan metode MFCC dengan pendekatan KNN. </h3>
+            <p>Proyek ini bertujuan untuk mengembangkan sistem yang mampu mengenali arti suara sirene ambulans dengan memanfaatkan teknik pengolahan sinyal digital untuk mengurangi noise, yang sering mengganggu suara sirene di lingkungan lalu lintas yang padat. </p>
+        </a>
+    </div>
+    
+    <div class="project-item fade-in">
+        <a href="/proyek10">
+            <h3>Sistem Basis Data untuk Pembelian dan Berlangganan E-Book Berbagai Kategori</h3>
+            <p>Proyek ini bertujuan merancang dan membangun Sistem Basis Data untuk mendukung proses pembelian dan langganan e-book. Sistem basis data ini dirancang untuk mengelola data pengguna, kategori buku, katalog e-book, transaksi pembelian, serta data paket langganan.  </p>
+        </a>
+    </div>
+    
+    <div class="project-item fade-in">
+        <a href="/proyek11">
+            <h3>Sistem Rekomendasi Restoran Berdasarkan Analisis Ulasan dan Rating Menggunakan Metode Clustering </h3>
+            <p>Proyek ini bertujuan untuk memberikan rekomendasi restoran yang relevan dan personal dengan memanfaatkan data ulasan dan rating dari pelanggan di beberapa restoran yang ada.</p>
+        </a>
+    </div>
+
+    <div class="project-item fade-in">
+        <a href="/proyek12">
+            <h3>Sicepet : Optimasi jalur pengantaran paket Amazon scout robot  di kota Semarang Menggunakan Algoritma Uniform Cost Search </h3>
+            <p>Proyek ini dirancang untuk menemukan jalur pengantaran paling efisien dengan mempertimbangkan jarak dan waktu tempuh di kota semarang pada tahun 2023 dan 2024.</p>
+        </a>
+    </div>
+
+    <div class="project-item fade-in">
+        <a href="/proyek13">
+            <h3>Atlas Shoes Care: Sistem Layanan Cuci Sepatu dengan Penyortiran Pesanan Berbasis Queue dan Algoritma Count Sort</h3>
+            <p>Atlas Shoes Care merupakan sebuah sistem yang menyediakan layanan untuk mencuci sepatu, dimana pengguna dapat memilih beberapa opsi dalam mencuci sepatu yang  sesuai dengan kebutuhannya. Program ini akan menyortir urutan pesanan menggunakan struktur data queue, serta algoritma count sort untuk mengurutkan rincian pesanan pengguna.</p>
+        </a>
+    </div>
+</section>
+
+<section class="pengalaman fade-in">
+    <h2>Pengalaman Organisasi & Sertifikat</h2>
+
+    <div class="galeri-sertifikat">
+        <img src="{{ url_for('static', filename='rrc.jpg') }}" alt="Sertifikat 1">
+        <img src="{{ url_for('static', filename='hpmig.png') }}" alt="Sertifikat 2">
+        <img src="{{ url_for('static', filename='dimasti.png') }}" alt="Sertifikat 3">
+        <img src="{{ url_for('static', filename='senada.png') }}" alt="Sertifikat 4">
+        <img src="{{ url_for('static', filename='aws.png') }}" alt="Sertifikat 5">
+        <img src="{{ url_for('static', filename='decoding.png') }}" alt="Sertifikat 6">
+    </div>
+
+    <div class="list-pengalaman">
+        <ul>
+            <li>🤖 <strong>Rengganis Robotic Club</strong> - Anggota Aktif</li>
+            <li>🎓 <strong>Himpunan Pelajar Mahasiswa Indonesia Gorontalo</strong> - Kepala Divisi KOMINFO</li>
+            <li>🏅 <strong>DIMAS-TI AMLI 2024</strong> - Medali Emas Divisi Inovasi Media Pembelajaran Digital</li>
+            <li>🎤 <strong>Seminar Nasional Sains Data 2025 UPN Veteran Jawa Timur</strong> - Presenter</li>
+            <li>☁️ <strong>AWS Training and Certification</strong></li>
+            <li>🧩 <strong>Diskusi Penelitian Simulation Theory oleh Universitas Indonesia</strong> - Peserta Diskusi</li>
+        </ul>
+    </div>
+
+    <hr class="garis-pemisah">
+
+    <section class="sertifikat-lainnya fade-in">
+        <h3>Sertifikat Lainnya</h3>
+        <ul>
+            <li>📸 <b>Orientasi Keluarga MIPA UNESA 2025</b> - Sie Dokumentasi & Branding</li>
+            <li>🎯 <b>Reloud Sains Data 2024</b> - Sie Akomodasi & Keamanan</li>
+            <li>💼 <b>Business Plan Competition 2024 oleh  HIMASADA UNESA</b> - Peserta</li>
+            <li>🎤 <b>Training Public Speaking FESt 2024</b> - Peserta</li>
+            <li>📝 <b>Workshop Penulisan Artikel Ilmiah BEM FMIPA UNESA 2023</b> - Peserta</li>
+            <li>📝 <b>Seminar Nasional Kebangsaan FEB UNESA 2023</b> - Peserta</li>
+        </ul>
+    </section>
+
+</section>
+
+
+
+<section class="kontak-saya fade-in">
+    <h2>Kontak Saya</h2>
+    <p class="petunjuk">Klik Ikon di Bawah Ini</p>
+
+    <div class="kontak-list">
+        <a href="https://www.linkedin.com/in/muhamad-alfa-reza-gobel-ab13a9363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="kontak-item">
+            <img src="{{ url_for('static', filename='Linkedin.png') }}" alt="LinkedIn">
+        </a>
+
+        <a href="mailto:alfarezagobel23@gmail.com" class="kontak-item">
+            <img src="{{ url_for('static', filename='Email.jpg') }}" alt="Email">
+        </a>
+
+        <a href="https://wa.me/6282143639175" target="_blank" class="kontak-item">
+            <img src="{{ url_for('static', filename='wa.jpg') }}" alt="WhatsApp">
+        </a>
+    </div>
+
+    <div class="kontak-info">
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/muhamad-alfa-reza-gobel-ab13a9363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Muhamad Alfa Reza Gobel</a></p>
+        <p>Email : <a href="mailto:alfarezagobel23@gmail.com">alfarezagobel23@gmail.com</a></p>
+        <p>WhatsApp : <a href="https://wa.me/6282143639175" target="_blank">+62 821-4363-9175</a></p>
+    </div>
+</section>
+
+<div id="overlay-sertifikat" style="display: none;">
+    <span id="closeSertifikat">&times;</span>
+    <img id="imgSertifikat" src="" alt="Sertifikat Besar">
+</div>
+
+
+
+</body>
+<script>
+window.onload = function() {
+    // Tanggal Real-time
+    function updateTanggal() {
+        const sekarang = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const tgl = sekarang.toLocaleDateString('id-ID', options);
+        document.getElementById('tanggal').innerText = tgl;
+    }
+    updateTanggal();
+    setInterval(updateTanggal, 60000);
+
+    // Zoom Sertifikat
+    document.querySelectorAll('.galeri-sertifikat img').forEach(img => {
+        img.addEventListener('click', function() {
+            document.getElementById('imgSertifikat').src = this.src;
+            document.getElementById('overlay-sertifikat').style.display = 'flex';
+        });
+    });
+
+    document.getElementById('closeSertifikat').addEventListener('click', function() {
+        document.getElementById('overlay-sertifikat').style.display = 'none';
+    });
+};
+</script>
+
+</html>

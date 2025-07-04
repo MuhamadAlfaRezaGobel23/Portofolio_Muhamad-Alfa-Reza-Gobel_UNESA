@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ proyek.judul }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<section class="detail-proyek">
+    <h1>{{ proyek.judul }}</h1>
+    <p>{{ proyek.deskripsi }}</p>
+
+    <div class="tujuan-manfaat">
+        <div>
+            <h3>Tujuan</h3>
+            <p>{{ proyek.tujuan }}</p>
+        </div>
+        <div>
+            <h3>Manfaat</h3>
+            <p>{{ proyek.manfaat }}</p>
+        </div>
+    </div>
+
+    <div class="tools">
+        <h3>TOOLS / SOFTWARE YANG DIGUNAKAN :</h3>
+        <div class="tools-list">
+            {% for tool in proyek.tools %}
+                <div class="tool-item" style="background-image: url('{{ url_for('static', filename=tool.logo) }}');">
+                    {{ tool.nama }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="galeri">
+        {% for img in proyek.gambar %}
+        <img src="{{ url_for('static', filename=img) }}" alt="Gambar Proyek">
+        {% endfor %}
+    </div>
+
+    <div id="overlay" class="overlay-hidden">
+        <span id="closeBtn">&times;</span>
+        <img id="overlayImg" src="" alt="Full Gambar">
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlayImg');
+        const closeBtn = document.getElementById('closeBtn');
+        const images = document.querySelectorAll('.galeri img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlay.style.display = 'flex';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+    });
+    </script>
+
+    <div class="link-btns">
+        {% if proyek.rpubs %}
+        <a href="{{ proyek.rpubs }}" target="_blank">
+            <img src="{{ url_for('static', filename='rpubs.png') }}" alt="RPubs">
+            <span>Lihat RPubs</span>
+        </a>
+        {% endif %}
+
+        {% if proyek.github %}
+        <a href="{{ proyek.github }}" target="_blank">
+            <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub">
+            <span>Lihat di GitHub</span>
+        </a>
+        {% endif %}
+
+        {% if proyek.behance %}
+        <a href="{{ proyek.behance }}" target="_blank">
+            <img src="{{ url_for('static', filename='behance.png') }}" alt="Behance">
+            <span>Lihat di Behance</span>
+        </a>
+        {% endif %}
+
+        {% if proyek.looker %}
+        <a href="{{ proyek.looker }}" target="_blank">
+            <img src="{{ url_for('static', filename='Looker.jpeg') }}" alt="Looker">
+            <span>Lihat di Looker Studio</span>
+        </a>
+        {% endif %}
+
+        {% if proyek.streamlit %}
+        <a href="{{ proyek.streamlit }}" target="_blank">
+            <img src="{{ url_for('static', filename='streamlit.png') }}" alt="streamlit">
+            <span>Lihat di Streamlit</span>
+        </a>
+        {% endif %}
+    </div>
+
+
+    {% if proyek.kolaborasi %}
+    <p class="kolaborasi">* {{ proyek.kolaborasi }}</p>
+    {% endif %}
+    
+</section>
+
+</body>
+</html>
